@@ -1,5 +1,5 @@
 const PortfolioCategory = () => {
-	return <div>PortfolioCategory</div>;
+	return <div>Portfolio Category</div>;
 };
 
 export default PortfolioCategory;
