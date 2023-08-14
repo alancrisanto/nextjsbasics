@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './navbar.module.css'
+import styles from "./navbar.module.css";
 
 import Link from "next/link";
 
@@ -40,12 +40,17 @@ const links = [
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      {links.map((link) => (
-        <Link href={link.url} key={link.id}>
-          {link.title}
-        </Link>
-      ))}
-      <button onClick={() => console.log("logout clicked")}>Logout</button>
+      <Link href="/" className={styles.logo}>
+        Alan Cris
+      </Link>
+      <div className={styles.links}>
+        {links.map((link) => (
+          <Link href={link.url} key={link.id} className={styles.link}>
+            {link.title}
+          </Link>
+        ))}
+        <button className={styles.logout} onClick={() => console.log("logout clicked")}>Logout</button>
+      </div>
     </div>
   );
 };
